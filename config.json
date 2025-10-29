@@ -1,0 +1,27 @@
+{
+    "dao_type": "excel",
+    "mysql": {
+        "host": "localhost",
+        "user": "root",
+        "password": "",
+        "database": "mi_base"
+    },
+    "txt": {
+        "filepath": "usuarios.txt"
+    },
+    "xml": {
+        "filepath": "usuarios.xml"
+    },
+    "sqlserver": {
+        "server": "localhost,1433",
+        "database": "mi_base",
+        "username": "sa",
+        "password": "12345",
+        "trusted_connection": true,
+        "driver": "ODBC Driver 17 for SQL Server"
+    },
+    "excel": {
+        "filepath": "mi_base.xlsx"
+    }
+}
+

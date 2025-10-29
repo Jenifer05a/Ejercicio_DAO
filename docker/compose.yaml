@@ -1,0 +1,28 @@
+
+services:
+  mariadb:
+    image: mariadb:11
+    container_name: mariadb
+    restart: always
+    environment:
+      MARIADB_ROOT_PASSWORD: rootpass
+      MARIADB_DATABASE: mi_base
+      MARIADB_USER: userdao
+      MARIADB_PASSWORD: userpass
+    volumes:
+      - ./datos:/var/lib/mysql
+    ports:
+      - "3306:3306"
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    restart: always
+    environment:
+      PMA_HOST: mariadb
+      PMA_USER: root
+      PMA_PASSWORD: rootpass
+    ports:
+      - "8091:80"
+    depends_on:
+      - mariadb
